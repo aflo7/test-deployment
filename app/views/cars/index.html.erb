@@ -1,0 +1,19 @@
+# <p style="color: green"><%= notice %></p>
+
+<h1>Cars</h1>
+
+
+<div id="cars" style="border: 5px solid black;display: flex; flex-direction: column; gap: 20px;">
+  <% @cars.each do |car| %>
+    <div style="border: 5px solid blue;">
+    <%= render car %>
+    <p>
+      <%= link_to "Show this car", car %>
+    </p>
+    </div>
+  <% end %>
+</div>
+
+
+
+<%= link_to "New car", new_car_path %>
